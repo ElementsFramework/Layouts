@@ -16,20 +16,20 @@ abstract class UIElement
      * Namespace of the package the element is published in definition.
      * @var string
      */
-    private $namespace;
+    protected $namespace;
 
     /**
      * User readable name of the UI element that will be shown in the builder.
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * HTML element that renders the icon that is shown for the element in the builder.
      * NOTE: Please use Font awesome for any publicly available elements.
      * @var string
      */
-    private $icon;
+    protected $icon;
 
     /**
      * Sets the template that will be rendered inside of this UI element.
@@ -37,7 +37,7 @@ abstract class UIElement
      * For more details visit https://github.com/ElementsFramework/LayoutBuilderUI
      * @var string
      */
-    private $content = null;
+    protected $content = null;
 
     /**
      * This array contains the default content data definition that will be rendered on init.
@@ -45,26 +45,26 @@ abstract class UIElement
      * For more details visit https://github.com/ElementsFramework/LayoutBuilderUI
      * @var array
      */
-    private $contentData = null;
+    protected $contentData = null;
 
     /**
      * Settings definition array that defines the settings form schema.
      * For more details visit https://github.com/ElementsFramework/LayoutBuilderUI
      * @var array
      */
-    private $settingsDefinition = null;
+    protected $settingsDefinition = null;
 
     /**
      * Options that are used to render the element.
      * @var array
      */
-    private $options = [];
+    protected $options = [];
 
     /**
      * Data used inside the render template.
      * @var array
      */
-    private $data = [];
+    protected $data = [];
 
     /*
      * Methods
@@ -75,7 +75,7 @@ abstract class UIElement
      * Allows you to pass data to the view when it gets rendered.
      * @param View $view
      */
-    public abstract static function renderViewComposer($app, View $view);
+    public abstract static function renderViewComposer(View $view);
 
     /**
      * Returns the view name this element renders.
@@ -165,6 +165,14 @@ abstract class UIElement
     public function setData($data)
     {
         $this->data = $data;
+    }
+
+    /**
+     * @param array $contentData
+     */
+    public function setContentData($contentData)
+    {
+        $this->contentData = $contentData;
     }
 
 }
