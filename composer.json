@@ -3,7 +3,7 @@
     "description": "This package provides the implementation for building user interfaces via a layout builder",
     "type": "library",
     "require": {
-        "laravel/laravel": "5.3.*"
+        "laravel/framework": "5.3.*"
     },
     "keywords": ["laravel", "layout", "layout builder"],
     "license": "MIT",
