@@ -25,6 +25,16 @@ class LayoutServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/Configuration/layout.php', 'layout'
         );
+
+        // Frontend
+        $this->loadRoutesFrom(__DIR__.'/Http/routes.php');
+        $this->loadViewsFrom(__DIR__.'/View', 'LayoutBuilder');
+        $this->publishes([
+            __DIR__.'/View' => resource_path('views/vendor/elements-framework/layout'),
+        ]);
+        $this->publishes([
+            dir(__DIR__).'dependencies/ui' => public_path('vendor/elements-framework/layout'),
+        ], 'public');
     }
 
     /**
