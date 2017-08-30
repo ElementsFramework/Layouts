@@ -26,7 +26,7 @@
                             icon: '<i class="fa fa-camera"></i>'
                         }
                     ],
-                    layout: {{ json_decode($layout->content) }},
+                    layout: {{ json_encode($layout->content) }},
             template: '<App :layout="layout" :submitUrl="submissionUrl" :uiElements="uiElements"/>',
             components: { App }
         });
