@@ -33,7 +33,7 @@ class LayoutServiceProvider extends ServiceProvider
             __DIR__.'/View' => resource_path('views/vendor/elements-framework/layout'),
         ]);
         $this->publishes([
-            dir(__DIR__).'dependencies/ui' => public_path('vendor/elements-framework/layout'),
+            dirname(__DIR__).'dependencies/ui' => public_path('vendor/elements-framework/layout'),
         ], 'public');
     }
 
