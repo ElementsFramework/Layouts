@@ -1,0 +1,3 @@
+[submodule "dependencies/ui"]
+	path = dependencies/ui
+	url = git@github.com:ElementsFramework/LayoutBuilderUI.git
