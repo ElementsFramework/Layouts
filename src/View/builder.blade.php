@@ -12,6 +12,7 @@
     <div id="app"></div>
     <script src="{{ asset('vendor/elements-framework/layout/ui/js/vfg-core.js') }}"></script>
     <script>
+        window.submissionUrl = "{{ route('elements.layout-builder.save', ['id' => $layout->id]) }}";
         window.uiElements = [
             {
                 name: '2 columns',
