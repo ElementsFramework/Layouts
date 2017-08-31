@@ -61,6 +61,6 @@
     </script>
     <script src="{{ asset('vendor/elements-framework/layout/ui/js/manifest.c2c8e5e757af47608ff8.js') }}"></script>
     <script src="{{ asset('vendor/elements-framework/layout/ui/js/vendor.64bc068fdea020983909.js') }}"></script>
-    <script src="{{ asset('vendor/elements-framework/layout/ui/js/app.d564626814a92e0fb1fb.js') }}"></script>
+    <script src="{{ asset('vendor/elements-framework/layout/ui/js/app.0d0f8483a89e7105c1c3.js') }}"></script>
 </body>
 </html>
