@@ -10,6 +10,7 @@
 </head>
 <body>
     <div id="app"></div>
+    <script src="{{ asset('vendor/elements-framework/layout/ui/js/vfg-core.js') }}"></script>
     <script>
         window.uiElements = [
             {
@@ -55,7 +56,7 @@
                 }
             }
         ];
-        window.layout = {!! json_encode($layout->content) !!};
+        window.layout = {!! $layout->content !!};
     </script>
     <script src="{{ asset('vendor/elements-framework/layout/ui/js/manifest.c2c8e5e757af47608ff8.js') }}"></script>
     <script src="{{ asset('vendor/elements-framework/layout/ui/js/vendor.64bc068fdea020983909.js') }}"></script>
