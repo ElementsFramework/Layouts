@@ -39,7 +39,7 @@ class LayoutEditorController extends Controller
         $layout->content = $request->getContent();
         $layout->save();
 
-        return json(['success' => 'true']);
+        return response()->json(['success' => 'true']);
     }
 
 }
